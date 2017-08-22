@@ -3,5 +3,6 @@
 <div *ngFor="let album of albums | async" (click)="goToDetailPage(album)" class="panel panel-default">
   <div class="panel-body">
     <h4>{{album.title}} <em>|  by: {{album.artist}}</em></h4>
+    <h6><strong>{{album.$key}}</strong></h6>
   </div>
 </div>

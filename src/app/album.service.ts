@@ -20,12 +20,9 @@ export class AlbumService {
     this.albums.push(newAlbum);
   }
 
-  getAlbumById(albumId: number) {
-    // for(var i = 0; i < ALBUMS.length; i++) {
-    //   if(ALBUMS[i].id === albumId) {
-    //     return ALBUMS[i];
-    //   }
-    // }
+  getAlbumById(albumId: string) {
+    //firebase does work of searching id's now, only returns one object, not a list
+    return this.database.object('albums/' + albumId);
   }
 
 
