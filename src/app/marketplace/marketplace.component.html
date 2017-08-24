@@ -4,5 +4,10 @@
   <div class="panel-body">
     <h4>{{album.title}} <em>|  by: {{album.artist}}</em></h4>
     <h6><strong>{{album.$key}}</strong></h6>
+    <div *ngIf="currentRoute === '/admin'">
+      {{album.description}}
+      <hr>
+      <app-edit-album [selectedAlbum]="album"></app-edit-album>
+    </div>
   </div>
 </div>
